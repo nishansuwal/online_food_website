@@ -1,0 +1,61 @@
+.sticky {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo h1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        .navigation {
+            display: flex; /* Arrange navigation links in a block */
+            text-align: center;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+        }
+
+        .navigation a {
+            display: block; /* Display navigation links as blocks */
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+            margin-left: 30px;
+        }
+
+        .search-container {
+            margin-left: auto;
+        }
+
+        /* Style for the search bar */
+        .search-container input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            background-color: #555;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Add some hover effect for navigation links */
+        .navigation a:hover {
+            background-color: #555;
+        }
