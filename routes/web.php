@@ -7,6 +7,7 @@ use App\Http\Controllers\FoodController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PurchasedController;
+use App\Http\Controllers\DetailcartController;
 
 
 /*
@@ -44,8 +45,13 @@ Route::middleware('auth')->group(function () {
     //purchased
     Route::post('/purchased',[PurchasedController::class,'purchased'])->name('purchased');
     Route::post('/purchasedStore',[PurchasedController::class,'purchasedStore'])->name('purchasedStore');
-    Route::post('/purchasedStoreInc',[PurchasedController::class,'purchasedStoreInc'])->name('purchasedStoreInc');
-    Route::post('/purchasedStoreDec',[PurchasedController::class,'purchasedStoreDec'])->name('purchasedStoreDec');
+    Route::get('/purchasedStoreInc/{id}',[PurchasedController::class,'purchasedStoreInc'])->name('purchasedStoreInc');
+    Route::get('/purchasedStoreDec/{id}',[PurchasedController::class,'purchasedStoreDec'])->name('purchasedStoreDec');
+
+    //cart detail
+    Route::get('/detail',[DetailcartController::class,'viewDetail'])->name('detail');
+    // Route::post('/moredetail{id}',[DetailcartController::class,'viewMoreDetail'])->name('moredetail');
+
 
 
 });
@@ -68,6 +74,14 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             Route::post('/food/delete/{id}',[FoodController::class,'destroy'])->name('food.delete');
             Route::get('/food/edit/{id}',[FoodController::class,'edit'])->name('food.edit');
             Route::post('/food/update/{id}',[FoodController::class,'update'])->name('food.update');
+
+
+
+            //cart detail
+            Route::get('/fooddetail',[DetailcartController::class,'viewfoodDetail'])->name('fooddetail');
+            Route::post('/morefooddetail{id}',[DetailcartController::class,'viewMoreDetail'])->name('moredetail');
+
+
         
 
     });

@@ -27,7 +27,7 @@ class CartController extends Controller
                     'quantity' => 1, // You can adjust the quantity as needed
                 ]);
             }
-            return redirect()->route('client.home');
+            return redirect()->route('home');
         }
 
         // Handle the case when the user is not authenticated

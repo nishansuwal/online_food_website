@@ -51,7 +51,6 @@
                         <table class="table table-bordered table-hover">
                             <thead class="table-dark">
                                 <tr>
-                                    <th>Product ID</th>
                                     <th>Product Image</th>
                                     <th>Product Name</th>
                                     <th>Quantity</th>
@@ -64,7 +63,7 @@
                                 @endphp
                                 @foreach ($userCarts as $cart)
                                     <tr>
-                                        <td>{{ $cart->food_id }}</td>
+                                        
                                         <td>
                                             <img src="{{ asset('/storage/' . $cart->food->image) }}" alt="Post Image"
                                                 class="img-fluid post-image" width='200' height='200'>

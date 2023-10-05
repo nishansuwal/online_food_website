@@ -11,6 +11,7 @@
 
             @if (Auth::check())
                  <a href="/cart">Cart</a>
+                 <a href="/detail">detail</a>
 
                 <x-dropdown-link :href="route('profile.edit')">
                     {{ __('Profile') }}
